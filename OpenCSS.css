@@ -1,0 +1,104 @@
+/*
+ * Open CSS - Estilos para projetos abertos
+ * Autor: Henrique (HenSit)
+ * Licença: MIT (https://opensource.org/licenses/MIT)
+ * Você pode usar, modificar e distribuir este CSS, desde que mantenha este aviso.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores principais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* CabeÃ§alho */
+.site-header {
+    background: linear-gradient(45deg, #3f51b5, #5c6bc0);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin-bottom: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffeb3b;
+}
+
+/* Ãrea principal */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Postagem do blog */
+.blog-post {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-post h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.blog-post .date {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* RodapÃ© */
+.site-footer {
+    background: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
