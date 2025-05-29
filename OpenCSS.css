@@ -4,101 +4,133 @@
  * Licença: MIT (https://opensource.org/licenses/MIT)
  * Você pode usar, modificar e distribuir este CSS, desde que mantenha este aviso.
  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    :root {
+      --bg: #0f0f0f;
+      --fg: #f0f0f0;
+      --accent: #00ffe1;
+      --card: #1c1c1c;
+      --border: #333;
+    }
 
-/* Fonte e cores principais */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-}
+    body {
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+    }
 
-/* CabeÃ§alho */
-.site-header {
-    background: linear-gradient(45deg, #3f51b5, #5c6bc0);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
+    .site-header {
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid var(--border);
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.site-header h1 {
-    margin-bottom: 10px;
-}
+    .site-header h1 {
+      color: var(--accent);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+    .nav-menu {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
 
-.nav-menu li {
-    display: inline;
-}
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--fg);
+      padding: 8px 12px;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
 
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    .nav-menu a:hover {
+      border: 1px solid var(--accent);
+      border-radius: 5px;
+      color: var(--accent);
+    }
 
-.nav-menu a:hover {
-    color: #ffeb3b;
-}
+    main.content {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-/* Ãrea principal */
-.content {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    main.content h2 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 30px;
+    }
 
-/* Postagem do blog */
-.blog-post {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
+    .blog-post {
+      background-color: var(--card);
+      border-left: 5px solid var(--accent);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0, 255, 255, 0.1);
+    }
 
-.blog-post h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+    .blog-post h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
 
-.blog-post .date {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #666;
-    margin-bottom: 10px;
-}
+    .blog-post .date {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #999;
+      margin-bottom: 10px;
+    }
 
-.blog-post p {
-    font-size: 1em;
-    color: #333;
-}
+    .blog-post p {
+      color: #ccc;
+      line-height: 1.6;
+    }
 
-/* RodapÃ© */
-.site-footer {
-    background: #3f51b5;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+    .blog-post a {
+      color: #00d1ff;
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-top: 2px solid var(--border);
+      color: #999;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .site-header {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--border);
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
